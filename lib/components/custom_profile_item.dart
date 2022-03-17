@@ -23,6 +23,9 @@ class CustomProfileItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: EdgeInsets.symmetric(
+        vertical: 2,
+      ),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 25, vertical: 20),
         child: Row(
@@ -30,7 +33,7 @@ class CustomProfileItem extends StatelessWidget {
           children: <Widget>[
             CircleAvatar(
               backgroundColor: Colors.transparent,
-              radius: 25,
+              radius: 45,
               child: Image.asset(
                 imagePath,
                 fit: BoxFit.fill,
@@ -56,7 +59,7 @@ class CustomProfileItem extends StatelessWidget {
                   Text(
                     subtitle,
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 16,
                       fontFamily: 'NunitoSans',
                       fontWeight: FontWeight.w300,
                     ),

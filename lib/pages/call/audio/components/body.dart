@@ -1,8 +1,6 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:medapp/pages/call/rounded_button.dart';
-import 'package:medapp/pages/call/size_config.dart';
+import 'package:englishnow/pages/call/rounded_button.dart';
+import 'package:englishnow/pages/call/size_config.dart';
 
 import 'dial_button.dart';
 import 'dial_user_pic.dart';

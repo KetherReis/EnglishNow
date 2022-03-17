@@ -1,9 +1,10 @@
+import 'package:englishnow/pages/profile/profile_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:medapp/pages/call/audio/dial_screen.dart';
-import 'package:medapp/pages/call/video/audio_call_with_image_screen.dart';
-import 'package:medapp/pages/contact/contact_detail_page.dart';
-import 'package:medapp/pages/contact/my_contact_page.dart';
+import 'package:englishnow/pages/call/audio/dial_screen.dart';
+import 'package:englishnow/pages/call/video/audio_call_with_image_screen.dart';
+import 'package:englishnow/pages/contact/contact_detail_page.dart';
+import 'package:englishnow/pages/contact/my_contact_page.dart';
 
 import '../pages/booking/filter/filter_page.dart';
 import '../pages/booking/step1/health_concern_page.dart';
@@ -103,6 +104,9 @@ class RouteGenerator {
 
       case Routes.dialScreen:
         return CupertinoPageRoute(builder: (_) => DialScreen());
+
+      case Routes.profilePage:
+        return CupertinoPageRoute(builder: (_) => ProfilePage());
 
       case Routes.videoCall:
         return CupertinoPageRoute(builder: (_) => AudioCallWithImage());

@@ -1,20 +1,15 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/round_icon_button.dart';
 import '../../data/pref_manager.dart';
 import '../../routes/routes.dart';
 import '../../utils/constants.dart';
-import '../examination/examination_page.dart';
-import '../description/description_page.dart';
-import '../test/test_page.dart';
 import '../visit/visit_page.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
   _ProfilePageState createState() => _ProfilePageState();
 }
-
 class _ProfilePageState extends State<ProfilePage>
     with AutomaticKeepAliveClientMixin<ProfilePage> {
   final _kTabTextStyle = TextStyle(
@@ -23,14 +18,9 @@ class _ProfilePageState extends State<ProfilePage>
     fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
   );
-
   final _kTabPages = [
     VisitPage(),
-    ExaminationPage(),
-    TestPage(),
-    DescriptionPage(),
   ];
-
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -38,31 +28,22 @@ class _ProfilePageState extends State<ProfilePage>
 
     var _kTabs = [
       Tab(
-        text: 'visit'.tr(),
-      ),
-      Tab(
-        text: 'examination'.tr(),
-      ),
-      Tab(
-        text: 'test'.tr(),
-      ),
-      Tab(
-        text: 'description'.tr(),
+        text: 'Próximo de Você',
       ),
     ];
-
-    return Column(
+    return new Scaffold(
+      body: new Column(
       children: <Widget>[
         Container(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.only(top: 50.0, left: 20),
           //color: Colors.white,
           child: Row(
             children: <Widget>[
               CircleAvatar(
-                radius: 32,
+                radius: 45,
                 backgroundColor: Colors.transparent,
                 backgroundImage: AssetImage(
-                  'assets/images/icon_man.png',
+                  'assets/images/user_5.png',
                 ),
               ),
               SizedBox(
@@ -151,8 +132,18 @@ class _ProfilePageState extends State<ProfilePage>
               ],
             ),
           ),
-        )
+        ),
       ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: (){
+          print("");
+        },
+        elevation: 5,
+        highlightElevation: 10
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 

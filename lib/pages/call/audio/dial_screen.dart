@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medapp/utils/constants.dart';
+import 'package:englishnow/utils/constants.dart';
 
 import '../audio/components/body.dart';
 import '../size_config.dart';

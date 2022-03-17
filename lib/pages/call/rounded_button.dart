@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:medapp/pages/call/size_config.dart';
+import 'package:englishnow/pages/call/size_config.dart';
 
 import 'size_config.dart';
 

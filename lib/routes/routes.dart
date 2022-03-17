@@ -15,7 +15,9 @@ class Routes {
   static const String prescriptionDetail = '/prescription_detail';
   static const String chatDetail = '/chat_detail';
   static const String doctorProfile = '/doctorProfile';
+  static const String profilePage = '/profilePage';
   static const String editProfile = '/edit_profile';
+  static const String searchFriend = '/search_friend';
   static const String changeLanguage = '/change_language';
   static const String notificationSettings = '/notification_settings';
   static const String myDoctors = '/my_doctors';

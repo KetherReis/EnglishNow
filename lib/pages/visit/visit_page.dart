@@ -20,65 +20,31 @@ class _VisitPageState extends State<VisitPage>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             VisitItem(
-              date: 'FEB 14',
-              time: 'Tue. 17:00',
               child: CustomProfileItem(
                 onTap: () {
-                  Navigator.of(context).pushNamed(Routes.visitDetail);
+                  Navigator.of(context).pushNamed(Routes.doctorProfile);
                 },
                 title: 'Carlos Borges',
                 subtitle: 'Iniciante',
-                buttonTitle: 'Ver Mais',
+                buttonTitle: 'Ver Perfil',
                 imagePath: 'assets/images/user_1.png',
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
             VisitItem(
-              date: 'JAN 08',
-              time: 'Tue. 17:00',
               child: CustomProfileItem(
                 onTap: () {},
                 title: 'Helena',
                 subtitle: 'Intermediário',
-                buttonTitle: 'Ver mais',
+                buttonTitle: 'Ver Perfil',
                 imagePath: 'assets/images/user_2.png',
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              children: <Widget>[
-                Expanded(
-                  child: Divider(
-                    height: 1,
-                    endIndent: 10,
-                    color: Colors.grey[250],
-                  ),
-                ),
-                Text('2018'),
-                Expanded(
-                  child: Divider(
-                    height: 1,
-                    indent: 10,
-                    color: Colors.grey[250],
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 20,
-            ),
             VisitItem(
-              date: 'NOV 24',
-              time: 'Tue. 17:00',
               child: CustomProfileItem(
                 onTap: () {},
                 title: 'Alaor',
                 subtitle: 'Nativo',
-                buttonTitle: 'Ver Mais',
+                buttonTitle: 'Ver Perfil',
                 imagePath: 'assets/images/user_3.png',
               ),
             ),
@@ -87,43 +53,21 @@ class _VisitPageState extends State<VisitPage>
       ),
     );
   }
-
   @override
   bool get wantKeepAlive => true;
 }
 
 class VisitItem extends StatelessWidget {
-  final String date;
-  final String time;
   final Widget child;
 
   const VisitItem(
-      {Key? key, required this.date, required this.time, required this.child})
+      {Key? key, required this.child})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              date,
-              style: Theme.of(context).textTheme.subtitle2!.copyWith(
-                    fontWeight: FontWeight.w700,
-                  ),
-            ),
-            Text(
-              time,
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 12,
-                fontWeight: FontWeight.w300,
-              ),
-            )
-          ],
-        ),
         SizedBox(
           width: 10,
         ),

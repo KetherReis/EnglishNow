@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:medapp/pages/call/size_config.dart';
+import 'package:englishnow/pages/call/size_config.dart';
 
 class DialButton extends StatelessWidget {
   const DialButton({

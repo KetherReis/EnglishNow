@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medapp/pages/profile/edit_profile_page.dart';
+import 'package:englishnow/pages/profile/edit_profile_page.dart';
 
 import '../../components/custom_navigation_bar.dart';
 import '../../data/pref_manager.dart';
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
     final _pages = [
       HomePage(),
       MessagesPage(),
-      Container(),
+      HomePage(),
       EditProfilePage(),
       SettingsPage(),
     ];
@@ -150,7 +150,7 @@ class _HomeState extends State<Home> {
                   child: GestureDetector(
                     onTap: () {
                       FocusScope.of(context).requestFocus(FocusNode());
-                      Navigator.of(context).pushNamed(Routes.login);
+                      Navigator.of(context).pushNamed(Routes.profilePage);
                     },
                     child: Container(
                       decoration: BoxDecoration(
