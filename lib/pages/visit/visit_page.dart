@@ -15,7 +15,7 @@ class _VisitPageState extends State<VisitPage>
     super.build(context);
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -68,9 +68,6 @@ class VisitItem extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        SizedBox(
-          width: 10,
-        ),
         Expanded(
           child: child,
         ),

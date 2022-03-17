@@ -20,6 +20,7 @@ class _ProfilePageState extends State<ProfilePage>
   );
   final _kTabPages = [
     VisitPage(),
+    VisitPage()
   ];
   @override
   Widget build(BuildContext context) {
@@ -30,6 +31,22 @@ class _ProfilePageState extends State<ProfilePage>
       Tab(
         text: 'Próximo de Você',
       ),
+      Container(
+        child: Expanded(
+        child: DropdownButtonHideUnderline(
+          child: DropdownButton(
+            isExpanded: true,
+          value: _selectedDistance,
+          onChanged: (String? value) {
+            setState(() {
+              _selectedDistance = value ?? "";
+            });
+          },
+          items: _dropDownDistance,
+      ),
+        ),
+      ),
+    )
     ];
     return new Scaffold(
       body: new Column(
@@ -135,18 +152,35 @@ class _ProfilePageState extends State<ProfilePage>
         ),
       ],
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: (){
-          print("");
-        },
-        elevation: 5,
-        highlightElevation: 10
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 
   @override
   bool get wantKeepAlive => true;
+
+  late List<DropdownMenuItem<String>> _dropDownDistance;
+  var _selectedDistance = 'Distance: 10km';
+  var _distanceItems = <String>[
+    'Distance: 10km',
+    'Distance: 20km',
+    'Distance: 30km',
+    'Distance: 40km'
+  ];
+  _initDropDowns() {
+
+    _dropDownDistance = _distanceItems
+        .map((String value) => DropdownMenuItem<String>(
+      value: value,
+         child: Text(value),
+    ))
+        .toList();
+  }
+  @override
+  void initState() {
+    super.initState();
+    _initDropDowns();
+  }
+
+
+
 }
